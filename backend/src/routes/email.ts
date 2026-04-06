@@ -47,6 +47,10 @@ router.post('/schedule', async (req, res) => {
     // 2. Queue jobs with individual delay spacing
     const startTimeMs = new Date(data.startTime).getTime();
     
+    if (!emailQueue) {
+      return res.status(500).json({ error: 'Queue not available - Redis disabled' });
+    }
+    
     for (let i = 0; i < request.emails.length; i++) {
       const email = request.emails[i];
       // Increase delay per email based on `delaySecs` parameter

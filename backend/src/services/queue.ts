@@ -3,6 +3,6 @@ import { redisConnection } from './redis';
 
 export const emailQueueName = 'email-queue';
 
-export const emailQueue = new Queue(emailQueueName, {
+export const emailQueue: Queue | null = redisConnection ? new Queue(emailQueueName, {
   connection: redisConnection
-});
+}) : null;
