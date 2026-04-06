@@ -1,16 +1,10 @@
-Here is your **fixed and clean `package.json`** (no explanations, just correct code):
-
-```json
 {
-  "name": "fullstack-app",
+  "name": "your-project",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cd frontend && npm run dev",
-    "build": "cd frontend && npm install && npm run build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "node backend/server.js"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  }
 }
-```
