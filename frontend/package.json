@@ -8,10 +8,6 @@
     "start": "next start",
     "lint": "eslint"
   },
-  "scripts": {
-    "start": "node backend/server.js",
-    "build": "cd frontend && npm install && npm run build"
-  }
   "dependencies": {
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
